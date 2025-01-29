@@ -1,5 +1,5 @@
-import {getRandom} from "../random.js";
-import basicOfGames from "../../index.js";
+import {getRandom} from "../utils.js";
+import basicOfGames from "../index.js";
 
 const getGameData = () => {
     let randomNumber1 = getRandom(100);

@@ -1,4 +1,4 @@
-import basicOfGames from "../../index.js";
+import basicOfGames from "../index.js";
 
 const getGameData = () => {
     const randomNumber = Math.floor(Math.random() * 50);

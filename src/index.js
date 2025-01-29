@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const basicOfGames=(desc, task)=>{
     console.log('Welcome to the Brain Games!');
