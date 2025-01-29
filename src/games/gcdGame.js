@@ -2,11 +2,11 @@ import {getRandom} from "../utils.js";
 import basicOfGames from "../index.js";
 
 const getGameData = () => {
-    let randomNumber1 = getRandom(100);
+    let randomNumber1 = getRandom(30);
     let randomNumber2 = getRandom(10);
     const question = `${randomNumber1} ${randomNumber2}`;
     const gcdTwoNumbers = (num1, num2) => {
-      if(num1>0){
+      if(num2 > 0){
           return gcdTwoNumbers(num2,num1 % num2);
       }
       return Math.abs(num1);
