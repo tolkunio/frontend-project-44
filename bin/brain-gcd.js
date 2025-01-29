@@ -1,4 +1,4 @@
-import getRandom from "../src/random.js";
+import {getRandom} from "../src/random.js";
 import basicOfGames from "../index.js";
 
 const gcdQuestion = 'Find the greatest common divisor of given numbers';
