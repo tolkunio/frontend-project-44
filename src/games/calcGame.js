@@ -6,7 +6,7 @@ const getGameData = () => {
     const randomNumber2 = getRandom(10);
     const signs = ['+', '-', '*'];
     const randomSigns = signs[getRandom(2)];
-    const question = `${randomNumber1}${randomSigns}${randomNumber2}`;
+    const question = `${randomNumber1} ${randomSigns} ${randomNumber2}`;
     let res = 0;
     switch (randomSigns) {
         case '+':
