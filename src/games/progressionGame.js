@@ -1,14 +1,12 @@
-import {getRandomRange} from "../utils.js";
+import {getRandom, getRandomRange} from "../utils.js";
 import basicOfGames from "../index.js";
 
 const getGameData =()=> {
-    const random=getRandomRange(5,10);
+    const length=getRandomRange(5,10);
     const first=Math.floor(Math.random()*10)+2;
-    if (first >= random) {
-        return ['Invalid progression', ''];
-    }
+
     const progression=[];
-    for(let i=first; i<random; i++){
+    for(let i=first; i<first+length; i+=1){
         progression.push(i);
     }
     const lastIndex=progression.length-1;
@@ -16,7 +14,7 @@ const getGameData =()=> {
     const removedNumber=progression[randomFromArr];
     progression[randomFromArr]='..';
     const question=progression.join(' ');
-    const result=removedNumber.toString();
+    const result=String(removedNumber);
     return[question,result];
 }
 
