@@ -1,6 +1,7 @@
 import {getRandom} from "../random.js";
+import basicOfGames from "../../index.js";
 
-export const calcGame = () => {
+const getGameData = () => {
     const randomNumber1 = getRandom(100);
     const randomNumber2 = getRandom(10);
     const signs = ['+', '-', '*'];
@@ -22,3 +23,9 @@ export const calcGame = () => {
     }
     return [question, res.toString()];
 };
+
+const calcGame = () => {
+    const rule = 'What is the result of the expression?';
+    basicOfGames(rule, getGameData);
+}
+export default calcGame;

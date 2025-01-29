@@ -1,6 +1,7 @@
 import {getRandomRange} from "../random.js";
+import basicOfGames from "../../index.js";
 
-export const progressionGame=()=>{
+const getGameData =()=> {
     const random=getRandomRange(5,10);
     const first=Math.floor(Math.random()*10)+2;
     if (first >= random) {
@@ -18,3 +19,10 @@ export const progressionGame=()=>{
     const result=removedNumber.toString();
     return[question,result];
 }
+
+const progressionGame =()=> {
+    const rule='What number is missing in the progression?';
+    basicOfGames(rule,getGameData);
+}
+
+export default progressionGame;

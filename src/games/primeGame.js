@@ -1,6 +1,7 @@
 import {getRandom} from "../random.js";
+import basicOfGames from "../../index.js";
 
-export const primeGame=()=>{
+const getGameData=()=>{
     const randomNum = getRandom(100);
     const isPrime =(num)=>{
         if(num <2){
@@ -15,3 +16,10 @@ export const primeGame=()=>{
     const result=isPrime(randomNum)?'yes':'no';
     return[randomNum,result];
 }
+
+const primeGame=()=>{
+    const rule='Answer "yes" if given number is prime. Otherwise answer "no".';
+    basicOfGames(rule,getGameData);
+}
+
+export default primeGame;
