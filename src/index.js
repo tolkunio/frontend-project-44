@@ -5,7 +5,7 @@ const basicOfGames=(desc, task)=>{
     const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
     console.log(desc);
-    for (let i = 0; i < 3; i += 1) {
+    for (let i = 0; i < 3; i ++) {
         const [question, result] = task();
         console.log(`Question: ${question}`);
         const userAnswer = (readlineSync.question('Your answer: '));
@@ -13,7 +13,7 @@ const basicOfGames=(desc, task)=>{
         if (userAnswer === correctAnswer) {
             console.log('Correct!');
         } else {
-            console.log(`"${userAnswer}" is wrong answer ;(.Correct answer was "${correctAnswer}"`);
+            console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was '${correctAnswer}'`);
             console.log(`Let's try again, ${name}!`);
             return;
         }
