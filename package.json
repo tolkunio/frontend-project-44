@@ -4,6 +4,7 @@
   "type": "module",
   "description": "[![Actions Status](https://github.com/tolkunio/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/tolkunio/frontend-project-44/actions)",
   "main": "index.js",
+  "homepage": "https://github.com/tolkunio/frontend-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
