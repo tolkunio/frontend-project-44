@@ -5,6 +5,7 @@ const basicOfGames = (desc, task) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   for (let i = 0; i < 3; i += 1) {
+    console.log(desc);
     const [question, result] = task();
     console.log(`Question: ${question}`);
     const userAnswer = (readlineSync.question('Your answer: '));
