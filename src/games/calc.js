@@ -1,32 +1,35 @@
-
 import startBrainGames from '../index.js';
-import getRandomNumber from "../utils.js";
+import getRandomNumber from '../utils.js';
 
-const getGameData = () => {
-  const randomNumber1 = getRandomNumber(1,100);
-  const randomNumber2 = getRandomNumber(1,10);
-  const signs = ['+', '-', '*'];
-  const randomSigns = signs[getRandomNumber(1,2)];
-  const question = `${randomNumber1} ${randomSigns} ${randomNumber2}`;
-  let res = 0;
-  switch (randomSigns) {
+const calculateResult = (operator, randomNumber1, randomNumber2) => {
+  let result = 0;
+  switch (operator) {
     case '+':
-      res = randomNumber1 + randomNumber2;
+      result = randomNumber1 + randomNumber2;
       break;
     case '-':
-      res = randomNumber1 - randomNumber2;
+      result = randomNumber1 - randomNumber2;
       break;
     case '*':
-      res = randomNumber1 * randomNumber2;
+      result = randomNumber1 * randomNumber2;
       break;
     default:
-      console.log('couldnt find signs');
+      throw new Error(`Unknown operator: ${operator}`);
   }
-  return [question, res.toString()];
+  return result;
+};
+const getGameData = () => {
+  const randomNumber1 = getRandomNumber(1, 100);
+  const randomNumber2 = getRandomNumber(1, 10);
+  const operators = ['+', '-', '*'];
+  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
+  const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
+  const result = calculateResult(randomOperator, randomNumber1, randomNumber2);
+  return [question, result.toString()];
 };
 
-const calcGame = () => {
+const calc = () => {
   const rule = 'What is the result of the expression?';
   startBrainGames(rule, getGameData);
 };
-export default calcGame;
+export default calc;
