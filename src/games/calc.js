@@ -1,11 +1,12 @@
-import { getRandom } from '../utils.js';
-import basicOfGames from '../index.js';
+
+import startBrainGames from '../index.js';
+import getRandomNumber from "../utils.js";
 
 const getGameData = () => {
-  const randomNumber1 = getRandom(100);
-  const randomNumber2 = getRandom(10);
+  const randomNumber1 = getRandomNumber(1,100);
+  const randomNumber2 = getRandomNumber(1,10);
   const signs = ['+', '-', '*'];
-  const randomSigns = signs[getRandom(2)];
+  const randomSigns = signs[getRandomNumber(1,2)];
   const question = `${randomNumber1} ${randomSigns} ${randomNumber2}`;
   let res = 0;
   switch (randomSigns) {
@@ -26,6 +27,6 @@ const getGameData = () => {
 
 const calcGame = () => {
   const rule = 'What is the result of the expression?';
-  basicOfGames(rule, getGameData);
+  startBrainGames(rule, getGameData);
 };
 export default calcGame;

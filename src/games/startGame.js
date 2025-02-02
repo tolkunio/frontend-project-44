@@ -1,4 +1,4 @@
-import basicOfGames from '../index.js';
+import startBrainGames from '../index.js';
 
 const getGameData = () => {
   const randomNumber = Math.floor(Math.random() * 50);
@@ -7,9 +7,9 @@ const getGameData = () => {
   return [randomNumber, result];
 };
 
-const evenGame = () => {
+const start = () => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  basicOfGames(rule, getGameData);
+  startBrainGames(rule, getGameData);
 };
 
-export default evenGame;
+export default start;

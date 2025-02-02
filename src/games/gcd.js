@@ -1,5 +1,5 @@
 import { getRandom } from '../utils.js';
-import basicOfGames from '../index.js';
+import startBrainGames from '../index.js';
 
 const getGameData = () => {
   const randomNumber1 = getRandom(30);
@@ -17,7 +17,7 @@ const getGameData = () => {
 
 const gcdGame = () => {
   const rule = 'Find the greatest common divisor of given numbers.';
-  basicOfGames(rule, getGameData);
+  startBrainGames(rule, getGameData);
 };
 
 export default gcdGame;

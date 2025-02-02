@@ -1,5 +1,5 @@
 import { getRandom } from '../utils.js';
-import basicOfGames from '../index.js';
+import startBrainGames from '../index.js';
 
 const getGameData = () => {
   const randomNum = getRandom(100);
@@ -19,7 +19,7 @@ const getGameData = () => {
 
 const primeGame = () => {
   const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  basicOfGames(rule, getGameData);
+  startBrainGames(rule, getGameData);
 };
 
 export default primeGame;

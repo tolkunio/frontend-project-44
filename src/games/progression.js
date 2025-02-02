@@ -1,5 +1,5 @@
 import { getRandomRange } from '../utils.js';
-import basicOfGames from '../index.js';
+import startBrainGames from '../index.js';
 
 const getGameData = () => {
   const length = getRandomRange(5, 10);
@@ -20,7 +20,7 @@ const getGameData = () => {
 
 const progressionGame = () => {
   const rule = 'What number is missing in the progression?';
-  basicOfGames(rule, getGameData);
+  startBrainGames(rule, getGameData);
 };
 
 export default progressionGame;
