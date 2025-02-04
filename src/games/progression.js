@@ -11,8 +11,8 @@ const generateProgression = (start, length, step) => {
 const getGameData = () => {
   const length = getRandomNumber(5, 10);
   const first = getRandomNumber(1, 10);
-
-  const progression = generateProgression(first, length);
+  const step=2;
+  const progression = generateProgression(first, length,step);
   const randomIndex = getRandomNumber(0, progression.length - 1);
   const removedNumber = progression[randomIndex];
   progression[randomIndex] = '..';
