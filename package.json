@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Brain Games is a project consisting of five console games designed to train your brain. Each game features three questions. Correct answers lead to victory, while incorrect ones end the game, allowing for a retry.",
-  "main": "src/index.js",
   "homepage": "https://github.com/tolkunio/frontend-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",

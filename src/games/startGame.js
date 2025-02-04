@@ -1,4 +1,4 @@
-import startBrainGames from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const isEven = (number) => number % 2 === 0;
@@ -11,7 +11,7 @@ const getGameData = () => {
 
 const startGame = () => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  startBrainGames(rule, getGameData);
+  runEngine(rule, getGameData);
 };
 
 export default startGame;
