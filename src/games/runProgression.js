@@ -22,7 +22,7 @@ const getGameData = () => {
 };
 
 const runProgression = () => {
-  const rule = 'What number is missing in the runProgression?';
+  const rule = 'What number is missing in the progression?';
   runEngine(rule, getGameData);
 };
 
