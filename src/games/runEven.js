@@ -9,9 +9,9 @@ const getGameData = () => {
   return [randomNumber, result];
 };
 
-const startGame = () => {
+const runEven = () => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
   runEngine(rule, getGameData);
 };
 
-export default startGame;
+export default runEven;

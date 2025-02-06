@@ -21,9 +21,9 @@ const getGameData = () => {
   return [question, result];
 };
 
-const progression = () => {
-  const rule = 'What number is missing in the progression?';
+const runProgression = () => {
+  const rule = 'What number is missing in the runProgression?';
   runEngine(rule, getGameData);
 };
 
-export default progression;
+export default runProgression;

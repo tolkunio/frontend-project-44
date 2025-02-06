@@ -12,13 +12,13 @@ const isPrime = (num) => {
 };
 const getGameData = () => {
   const number = getRandomNumber(1, 100);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [number, correctAnswer];
+  const answer = isPrime(number) ? 'yes' : 'no';
+  return [number, answer];
 };
 
-const prime = () => {
+const runPrime = () => {
   const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   runEngine(rule, getGameData);
 };
 
-export default prime;
+export default runPrime;
